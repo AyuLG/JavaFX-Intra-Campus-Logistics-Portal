@@ -1,0 +1,24 @@
+.root {
+    -fx-font-family: "Segoe UI", Arial;
+    -fx-background-color: #f4f4f4;
+}
+
+.button-orange {
+    -fx-background-color: #FF6600;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+.input-box {
+    -fx-background-radius: 5;
+    -fx-border-color: #ddd;
+    -fx-border-radius: 5;
+}
+
+.title-label {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FF6600;
+}

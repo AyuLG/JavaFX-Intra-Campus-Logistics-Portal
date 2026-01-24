@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.net.URL?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+
+<VBox fx:id="parentContainer" alignment="TOP_CENTER" prefHeight="650.0" prefWidth="400.0" 
+      style="-fx-background-color: #F1F5F9;" xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller="anagno.controller.LoginController">
+    
+    <stylesheets>
+        <URL value="@login.css" />
+    </stylesheets>
+
+    <HBox alignment="CENTER_RIGHT" spacing="15" style="-fx-padding: 15 20 0 0;">
+        <Button onAction="#handleMinimize" styleClass="window-control-button" text="—" />
+        <Button onAction="#handleClose" styleClass="window-control-button, close-button" text="✕" />
+    </HBox>
+
+    <VBox alignment="CENTER" VBox.vgrow="ALWAYS" style="-fx-padding: 20 35;">
+        <children>
+            
+            <VBox alignment="CENTER" spacing="25" maxWidth="340"
+                  style="-fx-background-color: white; 
+                         -fx-background-radius: 16; 
+                         -fx-border-color: #E2E8F0; 
+                         -fx-border-width: 1; 
+                         -fx-border-radius: 16; 
+                         -fx-padding: 40 30; 
+                         -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 10, 0, 0, 5);">
+                
+                <children>
+                    <VBox alignment="CENTER" spacing="12">
+                        <StackPane>
+                            <Circle fill="#6366F1" radius="32" />
+                            <Label text="A" style="-fx-text-fill: white; -fx-font-size: 28; -fx-font-weight: bold;" />
+                        </StackPane>
+                        <VBox alignment="CENTER" spacing="2">
+                            <Label text="UNIVERSITY DELIVERY" style="-fx-text-fill: #64748B; -fx-font-size: 10; -fx-letter-spacing: 1px; -fx-font-weight: bold;" />
+                            <Label text="Log in to your account" style="-fx-text-fill: #1E293B; -fx-font-size: 18; -fx-font-weight: bold;" />
+                        </VBox>
+                    </VBox>
+
+                    <VBox spacing="15">
+                        <VBox spacing="6">
+                            <Label styleClass="input-heading" text="USER NAME" style="-fx-text-fill: #475569; -fx-font-size: 11;" />
+                            <TextField fx:id="usernameField" promptText="Type your ID here" 
+                                       styleClass="login-input" prefHeight="45" 
+                                       style="-fx-background-color: #E0E7FF; -fx-background-radius: 8; -fx-border-radius: 8; -fx-text-fill: #1E293B;" />
+                        </VBox>
+
+                        <VBox spacing="6">
+                            <Label styleClass="input-heading" text="PASSWORD" style="-fx-text-fill: #475569; -fx-font-size: 11;" />
+                            <PasswordField fx:id="passwordField" promptText="Type your password" 
+                                           styleClass="login-input" prefHeight="45" 
+                                           style="-fx-background-color: #E0E7FF; -fx-background-radius: 8; -fx-border-radius: 8; -fx-text-fill: #1E293B;" />
+                        </VBox>
+                        
+                        <Button maxWidth="Infinity" onAction="#handleLogin" prefHeight="50" 
+                                style="-fx-background-color: #6366F1; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-cursor: hand;" 
+                                text="LOGIN" />
+                        
+                        <Label fx:id="errorLabel" alignment="CENTER" styleClass="error-message" text="" wrapText="true" />
+                    </VBox>
+
+                    <HBox alignment="CENTER" spacing="5">
+                        <Label style="-fx-text-fill: #64748B; -fx-font-size: 12;" text="No account?" />
+                        <Hyperlink onAction="#showRegistration" style="-fx-text-fill: #6366F1; -fx-font-weight: bold; -fx-underline: false;" text="Register here" />
+                    </HBox>
+                </children>
+            </VBox>
+        </children>
+    </VBox>
+
+    <HBox alignment="CENTER" style="-fx-padding: 15; -fx-background-color: transparent;">
+        <Label text="A SECURE LOGIN " style="-fx-text-fill: #94A3B8; -fx-font-size: 9px; -fx-letter-spacing: 1px;" />
+    </HBox>
+</VBox>

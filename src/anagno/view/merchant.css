@@ -1,0 +1,111 @@
+/* --- MASTER MERCHANT THEME --- */
+.root { -fx-font-family: "Georgia", serif; }
+
+/* Sidebar Background and Border */
+.sidebar {
+    -fx-background-color: #1A1A1D;
+    -fx-border-color: transparent #C5A059 transparent transparent;
+    -fx-border-width: 0 2 0 0;
+}
+
+/* GOLD BRANDING */
+.sidebar-logo-gold {
+    -fx-text-fill: #C5A059 !important;
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-letter-spacing: 2px;
+}
+
+.sidebar-subtitle-gold {
+    -fx-text-fill: #C5A059 !important;
+    -fx-font-family: "Arial";
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-opacity: 0.8;
+}
+
+/* PROFESSIONAL HOVER STATES */
+.sidebar-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #E3D5CA;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 12 20;
+    -fx-cursor: hand;
+    -fx-transition: 0.3s;
+    -fx-border-color: transparent;
+}
+
+.sidebar-button:hover {
+    -fx-background-color: #2E2E30;
+    -fx-text-fill: #C5A059 !important;
+    /* This adds a gold indicator line on the left when hovering */
+    -fx-border-color: transparent transparent transparent #C5A059;
+    -fx-border-width: 0 0 0 5;
+}
+
+.sidebar-button-active {
+    -fx-background-color: #C5A059;
+    -fx-text-fill: #1A1A1D !important;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 12 20;
+}
+
+.sidebar-button-logout {
+    -fx-background-color: transparent;
+    -fx-text-fill: #FF6666;
+    -fx-border-color: #FF6666;
+    -fx-border-width: 1;
+    -fx-cursor: hand;
+}
+
+.sidebar-button-logout:hover {
+    -fx-background-color: #FF6666;
+    -fx-text-fill: white !important;
+}
+
+/* THE LEDGER (TABLE) */
+.ledger-table {
+    -fx-background-color: white;
+    -fx-border-color: #1A1A1D;
+    -fx-table-cell-border-color: #EEE;
+}
+
+.ledger-table .column-header {
+    -fx-background-color: #1A1A1D;
+    -fx-padding: 8 0;
+}
+
+.ledger-table .column-header .label {
+    -fx-text-fill: #C5A059;
+    -fx-font-weight: bold;
+}
+
+/* MAIN CONTENT COLORS */
+.parchment-page {
+    -fx-background-color: #F4EBD0;
+    -fx-scale-x: 0.97;
+    -fx-scale-y: 0.97;
+    -fx-background-radius: 5;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 0);
+}
+
+.page-header { -fx-text-fill: #1A1A1D; -fx-font-size: 26px; -fx-font-weight: bold; }
+.button-ink-solid {
+    -fx-background-color: #1A1A1D;
+    -fx-text-fill: #F4EBD0;
+    -fx-cursor: hand;
+}
+.button-ink-solid:hover { -fx-background-color: #333; }
+.header-add-button {
+    -fx-background-color: #C5A059;
+    -fx-text-fill: white;
+    -fx-font-size: 22;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+}
+
+.header-add-button:hover {
+    -fx-background-color: #B28F4A;
+}

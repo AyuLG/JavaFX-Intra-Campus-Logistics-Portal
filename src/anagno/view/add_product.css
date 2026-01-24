@@ -1,0 +1,39 @@
+/* Header Add Button (The + in the top right) */
+.header-add-button {
+    -fx-background-color: #C5A059;
+    -fx-text-fill: white;
+    -fx-font-size: 24;
+    -fx-font-weight: bold;
+    -fx-background-radius: 12;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 2);
+}
+
+.header-add-button:hover {
+    -fx-background-color: #B28F4A;
+}
+
+/* Mobile Popup Container */
+.mobile-popup-frame {
+    -fx-background-color: #FDFBF7;
+    -fx-border-color: #D4AF37;
+    -fx-border-width: 2;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+}
+
+/* Form Input Heading */
+.input-heading {
+    -fx-text-fill: #95A5A6;
+    -fx-font-size: 10;
+    -fx-font-weight: bold;
+    -fx-character-spacing: 1;
+}
+
+/* ComboBox Mobile Style */
+.page-combo {
+    -fx-background-color: white;
+    -fx-border-color: #BDC3C7;
+    -fx-border-radius: 8;
+    -fx-padding: 5;
+}

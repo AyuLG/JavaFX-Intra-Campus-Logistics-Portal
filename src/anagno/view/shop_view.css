@@ -1,0 +1,13 @@
+
+.input-heading {
+    -fx-text-fill: #475569;
+    -fx-font-size: 11;
+    -fx-font-weight: bold;
+}
+
+
+.button-secondary {
+    -fx-background-color: transparent;
+    -fx-text-fill: #EF4444;
+    -fx-font-weight: bold;
+}

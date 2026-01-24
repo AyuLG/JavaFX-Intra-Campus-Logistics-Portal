@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="parentContainer" prefHeight="700.0" prefWidth="420.0" spacing="0" 
+      style="-fx-background-color: #F1F5F9;" xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller="anagno.controller.ShopViewController">
+    
+    <stylesheets>
+        <URL value="@login.css" />
+    </stylesheets>
+
+    <HBox alignment="CENTER_RIGHT" spacing="15" style="-fx-padding: 15 20 0 0;">
+        <Button onAction="#handleMinimize" styleClass="window-control-button" text="—" />
+        <Button onAction="#handleClose" styleClass="window-control-button, close-button" text="✕" />
+    </HBox>
+
+    <VBox spacing="15" style="-fx-padding: 10 30 20 30;">
+        <children>
+            <HBox alignment="CENTER_LEFT">
+                <children>
+                    <VBox HBox.hgrow="ALWAYS" spacing="2">
+                        <children>
+                            <Label text="MERCHANT VIEW" style="-fx-text-fill: #6366F1; -fx-font-size: 10; -fx-letter-spacing: 1.5px; -fx-font-weight: bold;" />
+                            <Label fx:id="shopNameLabel" style="-fx-text-fill: #1E293B; -fx-font-size: 24px; -fx-font-weight: bold;" text="Food Hub" />
+                            <HBox alignment="CENTER_LEFT" spacing="5">
+                                <Label style="-fx-text-fill: #10B981; -fx-font-size: 8px;" text="●" />
+                                <Label style="-fx-text-fill: #64748B; -fx-font-size: 11px;" text="OPEN NOW • UNIVERSITY MARKET" />
+                            </HBox>
+                        </children>
+                    </VBox>
+                    <Button onAction="#handleBack" prefHeight="40" prefWidth="40" 
+                            style="-fx-background-color: #E2E8F0; -fx-text-fill: #475569; -fx-background-radius: 10; -fx-font-size: 18px; -fx-font-weight: bold; -fx-cursor: hand;" text="←" />
+                </children>
+            </HBox>
+        </children>
+    </VBox>
+
+    <VBox spacing="20" VBox.vgrow="ALWAYS" style="-fx-padding: 0 30 30 30;">
+        <children>
+            <VBox spacing="15">
+                <children>
+                    <HBox alignment="CENTER_LEFT" spacing="10" 
+                          style="-fx-background-color: white; -fx-padding: 12 15; -fx-background-radius: 12; -fx-border-color: #E2E8F0; -fx-border-width: 1;">
+                        <children>
+                            <Label style="-fx-text-fill: #94A3B8; -fx-font-size: 14px;" text="🔍" />
+                            <TextField fx:id="searchField" promptText="Search dishes, snacks, or drinks..." 
+                                       style="-fx-background-color: transparent; -fx-padding: 0; -fx-prompt-text-fill: #94A3B8;" HBox.hgrow="ALWAYS" />
+                        </children>
+                    </HBox>
+
+                    <HBox spacing="10">
+                        <Button style="-fx-background-color: #6366F1; -fx-text-fill: white; -fx-background-radius: 20; -fx-font-size: 11px; -fx-padding: 6 18; -fx-font-weight: bold;" text="All" />
+                        <Button style="-fx-background-color: white; -fx-text-fill: #475569; -fx-background-radius: 20; -fx-border-color: #E2E8F0; -fx-font-size: 11px; -fx-padding: 6 18;" text="Meals" />
+                        <Button style="-fx-background-color: white; -fx-text-fill: #475569; -fx-background-radius: 20; -fx-border-color: #E2E8F0; -fx-font-size: 11px; -fx-padding: 6 18;" text="Snacks" />
+                        <Button style="-fx-background-color: white; -fx-text-fill: #475569; -fx-background-radius: 20; -fx-border-color: #E2E8F0; -fx-font-size: 11px; -fx-padding: 6 18;" text="Drinks" />
+                    </HBox>
+                </children>
+            </VBox>
+
+            <VBox spacing="12" VBox.vgrow="ALWAYS"
+                  style="-fx-background-color: white; -fx-background-radius: 16; -fx-border-color: #E2E8F0; -fx-border-width: 1; -fx-padding: 20; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 10, 0, 0, 5);">
+                <children>
+                    <Label text="TODAY'S SPECIALS" style="-fx-font-size: 11px; -fx-font-weight: bold; -fx-text-fill: #64748B; -fx-letter-spacing: 1.2px;" />
+
+                    <ScrollPane fitToWidth="true" style="-fx-background-color: transparent; -fx-background: transparent; -fx-border-color: transparent; -fx-viewport-background: transparent;" VBox.vgrow="ALWAYS">
+                        <content>
+                            <FlowPane fx:id="productContainer" alignment="TOP_LEFT" hgap="15" vgap="20">
+                                <padding>
+                                    <Insets bottom="10" top="5" />
+                                </padding>
+                            </FlowPane>
+                        </content>
+                    </ScrollPane>
+                </children>
+            </VBox>
+        </children>
+    </VBox>
+
+    <VBox style="-fx-background-color: white; -fx-border-color: #E2E8F0 transparent transparent transparent; -fx-padding: 20 30;">
+        <children>
+            <HBox alignment="CENTER" spacing="15">
+                <children>
+                    <VBox HBox.hgrow="ALWAYS">
+                        <children>
+                            <Label style="-fx-font-size: 10px; -fx-text-fill: #94A3B8; -fx-font-weight: bold; -fx-letter-spacing: 1px;" text="SUBTOTAL" />
+                            <Label fx:id="cartTotalLabel" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #1E293B;" text="0.00 ETB" />
+                        </children>
+                    </VBox>
+                    <Button onAction="#handleViewCart" prefHeight="50" prefWidth="170" 
+                            style="-fx-background-color: #6366F1; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 12; -fx-font-size: 14px; -fx-cursor: hand;" 
+                            text="PROCEED TO CART" />
+                </children>
+            </HBox>
+        </children>
+    </VBox>
+
+</VBox>

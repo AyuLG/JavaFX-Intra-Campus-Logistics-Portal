@@ -1,0 +1,71 @@
+.root { -fx-font-family: "Georgia", serif; }
+
+/* Main Frames */
+.book-cover, .book-frame {
+    -fx-background-color: #1A1A1D; 
+    -fx-border-color: #C5A059;     
+    -fx-border-width: 4;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+}
+
+/* Registration Page Styling */
+.parchment-page {
+    -fx-background-color: #F4EBD0; 
+    -fx-scale-x: 0.94; -fx-scale-y: 0.96;
+    -fx-background-radius: 2;
+}
+
+/* Typography Refinement */
+.cover-title { -fx-text-fill: #C5A059; -fx-font-size: 42px; -fx-font-weight: bold; -fx-letter-spacing: 2px; }
+.cover-subtitle { -fx-text-fill: #E3D5CA; -fx-font-size: 12px; -fx-font-weight: bold; -fx-opacity: 0.85; }
+.input-heading { -fx-text-fill: #C5A059; -fx-font-size: 11px; -fx-font-weight: bold; }
+.page-header { -fx-text-fill: #1A1A1D; -fx-font-size: 26px; -fx-font-weight: bold; }
+.page-label { -fx-text-fill: #1A1A1D; -fx-font-size: 12px; -fx-font-weight: bold; }
+
+/* Interactive Inputs */
+.login-input {
+    -fx-background-color: #242426; -fx-text-fill: white;
+    -fx-border-color: #444; -fx-border-width: 0 0 1 0;
+}
+.login-input:focused { -fx-border-color: #C5A059; -fx-background-color: #2E2E30; }
+
+.page-input, .page-combo {
+    -fx-background-color: transparent; -fx-text-fill: #1A1A1D;
+    -fx-border-color: #888; -fx-border-width: 0 0 1 0;
+}
+.page-input:focused { -fx-border-color: #1A1A1D; -fx-border-width: 0 0 2 0; }
+
+/* Professional Buttons */
+.main-login-button { 
+    -fx-background-color: #C5A059; -fx-text-fill: #1A1A1D; 
+    -fx-font-weight: bold; -fx-cursor: hand; -fx-background-radius: 2;
+}
+.main-login-button:hover { -fx-background-color: #E3D5CA; }
+
+.button-ink-solid { 
+    -fx-background-color: #1A1A1D; -fx-text-fill: #F4EBD0; 
+    -fx-font-weight: bold; -fx-cursor: hand; -fx-background-radius: 2;
+}
+.button-ink-solid:hover { -fx-background-color: #C5A059; -fx-text-fill: #1A1A1D; }
+
+/* Window Controls */
+.window-control-button { -fx-background-color: transparent; -fx-text-fill: #888; -fx-font-size: 14px; -fx-cursor: hand; }
+.window-control-button:hover { -fx-text-fill: #C5A059; }
+.close-button:hover { -fx-text-fill: #FF5555; }
+
+.register-link { -fx-text-fill: #C5A059; -fx-underline: true; }
+.page-link { -fx-text-fill: #1A1A1D; -fx-underline: true; }
+.error-message { -fx-text-fill: #FF6666; -fx-font-size: 11px; }
+.header-add-button {
+    -fx-background-color: #C5A059;
+    -fx-text-fill: white;
+    -fx-font-size: 22;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+}
+
+.header-add-button:hover {
+    -fx-background-color: #B28F4A;
+}

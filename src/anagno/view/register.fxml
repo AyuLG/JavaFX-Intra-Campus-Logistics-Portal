@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.net.URL?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+
+<VBox fx:id="parentContainer" alignment="TOP_CENTER" prefHeight="650.0" prefWidth="400.0" 
+      style="-fx-background-color: #F1F5F9;" xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller="anagno.controller.LoginController">
+    
+    <stylesheets>
+        <URL value="@login.css" />
+    </stylesheets>
+
+    <HBox alignment="CENTER_RIGHT" spacing="15" style="-fx-padding: 15 20 0 0;">
+        <Button onAction="#handleMinimize" styleClass="window-control-button" text="—" />
+        <Button onAction="#handleClose" styleClass="window-control-button, close-button" text="✕" />
+    </HBox>
+
+    <VBox alignment="CENTER" VBox.vgrow="ALWAYS" style="-fx-padding: 10 35 20 35;">
+        <children>
+            
+            <VBox alignment="CENTER" spacing="20" maxWidth="340"
+                  style="-fx-background-color: white; 
+                         -fx-background-radius: 16; 
+                         -fx-border-color: #E2E8F0; 
+                         -fx-border-width: 1; 
+                         -fx-border-radius: 16; 
+                         -fx-padding: 30 25; 
+                         -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 10, 0, 0, 5);">
+                
+                <children>
+                    <VBox alignment="CENTER" spacing="10">
+                        <Label text="UNIVERSITY DELIVERY" style="-fx-text-fill: #6366F1; -fx-font-size: 10; -fx-letter-spacing: 1px; -fx-font-weight: bold;" />
+                        <Label text="Create Account" style="-fx-text-fill: #1E293B; -fx-font-size: 20; -fx-font-weight: bold;" />
+                    </VBox>
+
+                    <VBox spacing="12">
+                        <VBox spacing="5">
+                            <Label text="FULL NAME" styleClass="input-heading" style="-fx-text-fill: #475569;" />
+                            <TextField fx:id="regUser" prefHeight="42" promptText="Enter your name" styleClass="login-input" 
+                                       style="-fx-background-color: #E0E7FF; -fx-background-radius: 8; -fx-border-radius: 8; -fx-text-fill: #1E293B;" />
+                        </VBox>
+
+                        <VBox spacing="5">
+                            <Label text="PASSWORD" styleClass="input-heading" style="-fx-text-fill: #475569;" />
+                            <PasswordField fx:id="regPass" prefHeight="42" promptText="Create a password" styleClass="login-input" 
+                                           style="-fx-background-color: #E0E7FF; -fx-background-radius: 8; -fx-border-radius: 8; -fx-text-fill: #1E293B;" />
+                        </VBox>
+
+                        <VBox spacing="5">
+                            <Label text="ROLE" styleClass="input-heading" style="-fx-text-fill: #475569;" />
+                            <ComboBox fx:id="roleBox" maxWidth="Infinity" prefHeight="42" promptText="Who are you?" styleClass="page-combo" 
+                                      style="-fx-background-color: #E0E7FF; -fx-background-radius: 8; -fx-border-radius: 8; -fx-padding: 0 10;" />
+                        </VBox>
+
+                        <VBox spacing="5">
+                            <Label text="GENDER" styleClass="input-heading" style="-fx-text-fill: #475569;" />
+                            <ComboBox fx:id="genderBox" maxWidth="Infinity" prefHeight="42" promptText="Select gender" styleClass="page-combo" 
+                                      style="-fx-background-color: #E0E7FF; -fx-background-radius: 8; -fx-border-radius: 8; -fx-padding: 0 10;" />
+                        </VBox>
+                    </VBox>
+
+                    <VBox spacing="10" alignment="CENTER">
+                        <Button maxWidth="Infinity" onAction="#handleRegister" prefHeight="48" 
+                                styleClass="button-primary" text="REGISTER NOW" 
+                                style="-fx-background-color: #6366F1; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-cursor: hand;" />
+                        
+                        <HBox alignment="CENTER" spacing="5">
+                            <Label text="Already have an account?" style="-fx-text-fill: #64748B; -fx-font-size: 11;" />
+                            <Hyperlink onAction="#showLogin" text="Sign In" 
+                                       style="-fx-text-fill: #6366F1; -fx-font-weight: bold; -fx-underline: false; -fx-font-size: 11;" />
+                        </HBox>
+                    </VBox>
+                </children>
+            </VBox>
+        </children>
+    </VBox>
+
+    <HBox alignment="CENTER" style="-fx-padding: 10;">
+        <Label text="SECURE REGISTRATION SYSTEM" style="-fx-text-fill: #94A3B8; -fx-font-size: 9px; -fx-letter-spacing: 1px;" />
+    </HBox>
+</VBox>
