@@ -1,6 +1,6 @@
 # Anagno: Intra-Campus Logistics Portal
 
-**Anagno** is a high-performance, JavaFX-based logistics ecosystem engineered to streamline intra-campus supply chains. By digitizing the workflow between local merchants and student couriers, the system provides a unified infrastructure for inventory control, real-time dispatch tracking, and last-mile fulfillment.
+**Anagno** is a JavaFX-based logistics ecosystem engineered to streamline intra-campus supply chains. By digitizing the workflow between local merchants and student couriers, the system provides a unified infrastructure for inventory control, real-time dispatch tracking, and last-mile fulfillment.
 
 ---
 
